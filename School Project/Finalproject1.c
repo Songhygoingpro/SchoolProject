@@ -94,44 +94,60 @@ int main() {
     double result;
     const char* conversionType;
     switch (choice) {
-        case 1:
+    case 1:
         result = celsiusToFahrenheit(value);
-            conversionType = "Celsius to Fahrenheit";
-            printf("%.2f degrees Celsius is equal to %.2f degrees Fahrenheit.\n", value, celsiusToFahrenheit(value));
-            break;
-        case 2:
+        conversionType = "Celsius to Fahrenheit";
+        printf("%.2f degrees Celsius is equal to %.2f degrees Fahrenheit.\n", value, result);
+        break;
+    case 2:
         result = fahrenheitToCelsius(value);
-            conversionType = "Fahrenheit to Celsius";
-            printf("%.2f degrees Fahrenheit is equal to %.2f degrees Celsius.\n", value, result);
-            break;
-        case 3:
-            printf("%.2f kilometers is equal to %.2f miles.\n", value, kilometersToMiles(value));
-            break;
-        case 4:
-            printf("%.2f miles is equal to %.2f kilometers.\n", value, milesToKilometers(value));
-            break;
-        case 5:
-            printf("%.2f hours is equal to %.2f minutes.\n", value, hoursToMinutes(value));
-            break;
-        case 6:
-            printf("%.2f minutes is equal to %.2f hours.\n", value, minutesToHours(value));
-            break;
-        case 7:
-            printf("%.2f USD is equal to %.2f EUR.\n", value, usdToEur(value));
-            break;
-        case 8:
-            printf("%.2f EUR is equal to %.2f USD.\n", value, eurToUsd(value));
-            break;
-        case 9:
-            printf("%.2f kilograms is equal to %.2f pounds.\n", value, kilogramsToPounds(value));
-            break;
-        case 10:
-            printf("%.2f pounds is equal to %.2f kilograms.\n", value, poundsToKilograms(value));
-            break;
-        default:
-            printf("Invalid choice!\n");
-            break;
-    }
+        conversionType = "Fahrenheit to Celsius";
+        printf("%.2f degrees Fahrenheit is equal to %.2f degrees Celsius.\n", value, result);
+        break;
+    case 3:
+        result = kilometersToMiles(value);
+        conversionType = "Kilometers to Miles";
+        printf("%.2f kilometers is equal to %.2f miles.\n", value, result);
+        break;
+    case 4:
+        result = milesToKilometers(value);
+        conversionType = "Miles to Kilometers";
+        printf("%.2f miles is equal to %.2f kilometers.\n", value, result);
+        break;
+    case 5:
+        result = hoursToMinutes(value);
+        conversionType = "Hours to Minutes";
+        printf("%.2f hours is equal to %.2f minutes.\n", value, result);
+        break;
+    case 6:
+        result = minutesToHours(value);
+        conversionType = "Minutes to Hours";
+        printf("%.2f minutes is equal to %.2f hours.\n", value, result);
+        break;
+    case 7:
+        result = usdToEur(value);
+        conversionType = "USD to EUR";
+        printf("%.2f USD is equal to %.2f EUR.\n", value, result);
+        break;
+    case 8:
+        result = eurToUsd(value);
+        conversionType = "EUR to USD";
+        printf("%.2f EUR is equal to %.2f USD.\n", value, result);
+        break;
+    case 9:
+        result = kilogramsToPounds(value);
+        conversionType = "Kilograms to Pounds";
+        printf("%.2f kilograms is equal to %.2f pounds.\n", value, result);
+        break;
+    case 10:
+        result = poundsToKilograms(value);
+        conversionType = "Pounds to Kilograms";
+        printf("%.2f pounds is equal to %.2f kilograms.\n", value, result);
+        break;
+    default:
+        printf("Invalid choice!\n");
+        break;
+}
      saveConversionToFile(value, result, conversionType);
     displayConversionHistory();
 
