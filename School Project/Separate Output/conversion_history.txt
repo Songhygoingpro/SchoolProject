@@ -1,0 +1,2 @@
+Input: 34.00	Result: 1.11	Conversion: Fahrenheit to Celsius
+Input: 35.00	Result: 1.67	Conversion: Fahrenheit to Celsius
