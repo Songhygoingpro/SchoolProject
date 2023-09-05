@@ -50,26 +50,25 @@ void saveConversionToFile(double input, double result, const char* conversionTyp
     }
 }
 
-void displayConversionHistory() {
-    FILE* file = fopen("conversion_history.txt", "r");
-    if (file != NULL) {
-        printf("Conversion History:\n");
-        char line[100];
-        while (fgets(line, sizeof(line), file) != NULL) {
-            printf("%s", line);
-        }
-        fclose(file);
-    } else {
-        printf("No conversion history found.\n");
-    }
-}
+// void displayConversionHistory() {
+//     FILE* file = fopen("conversion_history.txt", "r");
+//     if (file != NULL) {
+//         printf("Conversion History:\n");
+//         char line[100];
+//         while (fgets(line, sizeof(line), file) != NULL) {
+//             printf("%s", line);
+//         }
+//         fclose(file);
+//     } else {
+//         printf("No conversion history found.\n");
+//     }
+// }
 
 int main() {
     FILE *file;
     file = fopen("conversions.txt", "a");
     if (file == NULL) {
         printf("Error opening file!\n");
-        return 1;
     }
     int choice;
     double value;
@@ -149,7 +148,7 @@ int main() {
         break;
 }
      saveConversionToFile(value, result, conversionType);
-    displayConversionHistory();
+    //displayConversionHistory();
 
     return 0;
 }
